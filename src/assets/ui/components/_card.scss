@@ -1,0 +1,21 @@
+.card{
+    background-color:var(--color-component-background);
+    color: var(--color-text);
+    border-radius:4px;    box-shadow: 0 4px 25px 0 rgba(0,0,0,.1);
+    // @include p(.7rem);
+    .card__header{
+        @include py(.74rem);
+        @include px(1.25rem);
+        border-bottom: solid $gray-400 .5px;
+    }
+    .card__body{
+        @include py(.7rem);
+        @include px(1.25rem);
+        font-size: $text-sm;
+    }
+    .card__footer{
+        @include py(.74rem);
+        @include px(1.25rem);
+        font-size: $text-sm;
+    }
+}

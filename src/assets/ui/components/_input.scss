@@ -1,0 +1,85 @@
+.form__group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5rem;
+    label{
+        display: block;
+        margin-bottom: .3rem;
+        font-size: $text-sm;
+        user-select: none;
+    }
+  
+}
+.form__control{
+    width: 100%;
+    @include px(.8rem);
+    @include py(.72rem);
+    border-style: solid;
+    border-width: .8px;
+    border-radius: 4px;
+    font-size: 14px ;
+    color: $dark;
+    border-color: rgba(39, 39, 39,.3);
+    &:focus{
+        border-color: var(--sj-primary);
+        // box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+    &.form__control__sm{
+        font-size: 12px !important;
+    }
+    &.form__control__lg{
+        font-size: $text-base !important;
+    }
+}
+.input__group__prepend{
+    display: flex;
+    button{
+       border-top-right-radius: 0;
+       border-bottom-right-radius: 0;
+    }
+    // input{
+    //    border-radius: 0;
+    //    border-left: 0;
+    //    border-right: 0;
+    // }
+}
+.group__pend{
+    display: flex;
+    width: 100%;
+    input{
+        border-radius: 0;
+    }
+}
+.input__group__prepend{
+    display: flex;
+    button:first-child{
+       border-top-left-radius: 4px !important;
+       border-bottom-left-radius: 4px !important;
+    }
+    button:nth-child(n){
+        border-radius: 0;
+    }
+}
+.input__group__append{
+    display: flex;
+    div,button:first-child{
+       border-top-left-radius: 0;
+       border-bottom-left-radius: 0;
+    }
+    div,button:nth-child(n){
+        border-radius: 0;
+    }
+    div,button:last-child{
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+}
+
+.isInvalid_f{
+    border-color:$danger;
+    &:focus{border-color: $danger;}
+}
+.isValid_f{
+    border-color:$success;
+    &:focus{border-color: $success;}
+}

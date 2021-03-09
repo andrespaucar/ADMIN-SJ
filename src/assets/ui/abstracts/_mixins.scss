@@ -1,0 +1,29 @@
+@mixin scrollbars($size,$foreground-color,$background-color: mix($foreground-color, white,  50%)) {
+    &::-webkit-scrollbar{
+        width: $size; height: $size;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: $foreground-color;
+    }
+    &::-webkit-scrollbar-track{
+        background: $background-color;
+    }
+    &::-webkit-scrollbar-thumb:hover{
+        background: mix($foreground-color, rgb(0, 0, 0),  80%);
+    }
+     // For Internet Explorer
+    & {
+        scrollbar-face-color: $foreground-color;
+        scrollbar-track-color: $background-color;
+    }
+}
+
+@mixin px($size) {
+    padding-right: $size; padding-left: $size;
+}
+@mixin py($size) {
+    padding-top: $size; padding-bottom: $size;
+}
+@mixin p($size) {
+    padding: $size; 
+}

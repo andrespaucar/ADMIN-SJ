@@ -1,0 +1,19 @@
+// .main_sidebar{
+//     transition: width .3s linear,
+//     opacity .3s ease,
+//     visibility .3s ease;
+// }
+.sidebar__mini{
+    --with-sidebar : 4.5rem;
+    .nav__item p,.nav__item div{
+         
+        display:none;
+    }
+    .brand__sidebar p{ display: none;}
+}
+
+@media (min-width: map-get($map:$md,$key:'min')) and (max-width:map-get($map: $md, $key: 'max')){
+    // body{
+    //     --with-sidebar:4.5rem;
+    // }
+}

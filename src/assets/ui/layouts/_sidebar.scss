@@ -1,0 +1,53 @@
+.main__sidebar{
+    color:  var(--color-text);
+    position: relative;
+    background-color: var(--color-sidebar-background);
+    position: absolute;
+    top:0;left: 0; bottom: 0;
+    overflow-y: auto;
+    width: var(--with-sidebar);
+    @include scrollbars(.5em, slategray);    
+    box-shadow: 0 4px 25px 0 rgba(0,0,0,.1);
+    transition: width .3s ease;
+    // @include px(.9rem);
+    // @include py(.8rem);
+}
+.navs__group{
+    position: relative;
+    @include px(.9rem);
+    @include py(.8rem);
+}
+.brand__sidebar{
+    color:  var(--color-text);
+    display: flex; align-items: center;
+    white-space: nowrap;
+    // border-bottom: solid $white .8px;
+    @include px(1.25rem);@include py(1.045rem);
+    img{
+        width: 36px;
+        margin-right: .8rem;
+    }
+}
+.nav__item{
+    
+    cursor: pointer;
+    font-size: .89rem;
+    font-weight: 200;
+    @include px(.8rem);
+    @include py(.6rem);
+    white-space: nowrap;
+    display: flex; align-items: center;
+    .right__ic{
+       margin-left: auto;
+    }
+    font-size: .9rem;
+    border-radius: 5px;
+    margin-bottom: .25rem;
+    &.active{
+        background-color: $indigo;
+        color: $white;
+    }
+    &:not(.active):hover {
+        background-color: var(--bg-hover-sidebar);
+    }
+}

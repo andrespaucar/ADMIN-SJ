@@ -1,0 +1,37 @@
+.btn {
+  display: block;
+  color: $white;
+  border-radius: 4px;
+  border-color: transparent;
+  @include px(1.5rem);
+  @include py(.4rem);
+  cursor: pointer;
+  font-size: .89rem;
+  line-height: 1.5;
+  white-space: nowrap;
+  &:disabled, &.disabled {  
+    pointer-events: none;
+  }
+}
+@each $key,$val in $colors {
+  .btn-#{$key}{
+    background-color:#{$val};
+    transition:box-shadow .2s ease;
+    &:hover{
+      box-shadow: 0 8px 25px -8px rgba($val,1);
+    }
+  }
+}
+
+.btn-g-danger{
+  background: linear-gradient( to right ,#E22163,#F74D24);
+  color:white; 
+}
+.btn-sm{
+  @include px(1rem);
+  @include py(.3rem);
+  font-size: .8rem;
+}
+.btn-block{
+  display: block; width: 100%;
+}

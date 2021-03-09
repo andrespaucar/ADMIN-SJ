@@ -1,0 +1,235 @@
+// COLORS
+$primary :  #0D65BC !default;   $yellow:    #ffc107 !default;
+$secondary: #6c757d !default;   $default:   #e3e3e3  !default ;
+$danger :   #E12162 !default;   $white:     #ffff  !default;
+$success:   #00E779 !default;
+$warning:    #ffc107 !default;
+$indigo:    #4D58FD !default;
+$purple:    #6A60F5 !default;
+$info:      #079CFB !default;
+$orange:    #FAA249 !default;
+$light:     #f8f9fa !default;
+$teal:      #20c997 !default;
+$dark:      #343a40 !default;
+
+$bg-dark: #1B203A !default;
+$bg-page: #F4F6F9 !default;
+$bg-hover-menu: rgba(0,0,0,.1) !default;
+$bg-hover-menu-dark: rgba(255,255,255,.1) !default;
+$bg-component: #ffff !default;
+$bg-component-dark: #272B4A !important;
+$bg-sidebar:#ffff !important;
+$bg-sidebar-dark:#252C48 !important;
+
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+// WIDTH SIDEBAR MENU
+$width-sidebar: 16rem;
+:root {
+    --color-page-background: #{$bg-page };
+    --color-sidebar-background: #{$bg-sidebar};
+    --color-component-background: #{$bg-component};
+    --color-text: #{rgba($black,.80)};
+    --bg-hover-sidebar:#{$bg-hover-menu};
+    
+    --sj-primary:#{$primary};
+    --sj-success:#{$success};
+    --sj-warning:#{$warning};
+    --sj-danger:#{$danger};
+    --sj-info:#{$info};
+    --sj-dark:#{$dark};
+    --sj-secondary:#{$secondary};
+    --sj-dark:#{$dark};
+
+    --with-sidebar:#{$width-sidebar};
+}
+
+$grays:(
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  );
+$colors : (
+    "primary":  $primary,
+    "secondary":  $secondary,
+    "success":  $success,
+    "danger": $danger,
+    "info":  $info,
+    "warning":  $warning,
+    "light":  $light,
+    "dark":  $dark
+);
+@each $key,$value in $colors {
+    .text-#{$key}{
+        color: #{$value}
+    }
+    .bg-#{$key}{
+        background-color: #{$value}
+    }
+}
+// BRACKPOINTS
+$sm : ("max":767px); //  ("min" : 640px ,"max" : 767px)
+$md : ('min': 768px, 'max':1023px); // ("min" : 768px, "max":1023px)
+$lg : ("min": 1024px, "max":1279px); // ("min" : 1024px, "max":1279px)
+$xl : ("min":1280px); // ("min" : 1280px)
+
+
+// PRUEBA
+// SM
+// @media (max-width: map-get($map: $sm, $key:'max')){
+//     body{background: $danger  !important;}
+// }
+// @media (min-width: map-get($map:$md,$key:'min')) and (max-width:map-get($map: $md, $key: 'max')){
+//     body{background:$indigo  !important;}
+// }
+// @media (min-width: map-get($map:$lg,$key:'min')) and (max-width:map-get($map: $lg, $key: 'max')){
+//     body{background:$info !important;}
+// }
+// @media (min-width: map-get($map: $xl, $key:'min')){
+//     body{background: $danger  !important;}
+// }
+$spacing:(
+    '1': '0.25rem',
+    '2': '0.5rem',
+    '3': '0.75rem',
+    '4': '1rem',
+    '5': '1.25rem',
+    '6': '1.5rem',
+    '8': '2rem',
+    '10': '2.5rem',
+    '12': '3rem',
+    '16': '4rem',
+    '20': '5rem',
+    '24': '6rem',
+    '32': '8rem',
+    '40': '10rem',
+    '48': '12rem',
+    '56': '14rem',
+);
+// PADDINGS AND MARGINS
+@for $i from 1 through  6 {
+    .p-#{$i}{
+        padding: #{$i/4}rem;
+    }
+    .m-#{$i}{
+        margin: #{$i/4}rem;
+    }
+    .pb-#{$i},.py-#{$i}{
+        padding-bottom: #{$i/4}rem;
+    }
+    .pt-#{$i},.py-#{$i}{
+        padding-top: #{$i/4}rem; 
+    }
+    .pl-#{$i},.px-#{$i}{
+        padding-left: #{$i/4}rem;
+    }
+    .pr-#{$i},.px-#{$i}{
+        padding-right: #{$i/4}rem;
+    }
+    .mb-#{$i},.my-#{$i}{
+        margin-bottom: #{$i/4}rem;
+    }
+    .mt-#{$i},.my-#{$i}{
+        margin-top: #{$i/4}rem; 
+    }
+    .ml-#{$i},.mx-#{$i}{
+        margin-left: #{$i/4}rem;
+    }
+    .mr-#{$i},.mx-#{$i}{
+        margin-right: #{$i/4}rem;
+    }
+}
+
+// FONT SIZE
+$text-xs: 0.75rem;
+$text-sm: 0.875rem;
+$text-base: 1rem;
+$text-lg: 1.125rem;
+$text-xl: 1.25rem;
+$text-2xl: 1.5rem;
+$text-3xl: 1.875rem;
+$text-4xl: 2.25rem;
+$text-5xl: 3rem;
+$texts : (
+    "xs":  $text-xs,
+    "sm":  $text-sm,
+    "base": $text-base,
+    "lg":  $text-lg,
+    "xl":  $text-xl,
+    "2xl": $text-2xl,
+    "3xl": $text-3xl,
+    "4xl": $text-4xl,
+    "5xl": $text-5xl,
+);
+$weights : (
+    "hairline": 100,
+    "thin": 200,
+    "light": 300,
+    "normal": 400,
+    "medium": 500,
+    "semibold": 600,
+    "bold": 700,
+    "extrabold": 800,
+    "black": 900,
+);
+@each $key,$value in $texts {
+    .text-#{$key}{
+        font-size: #{$value}
+    }
+}
+@each $key,$value in $weights {
+    .font-#{$key}{
+        font-weight: #{$value};
+    }
+}
+
+// BOX - SHADOW
+.shadow-xs{
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.shadow-sm{
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.shadow{
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.shadow-md{
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.shadow-lg{
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.shadow-xl{
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.shadow-2xl{
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+// ROUNDED
+.rounded{
+    border-radius: 0.25rem;
+} 
+.rounded-sm{
+    border-radius: 0.125rem;
+} 
+.rounded-md{
+    border-radius: 0.375rem;
+}
+.rounded-lg{
+    border-radius: 0.5rem;
+}

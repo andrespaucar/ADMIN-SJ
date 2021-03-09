@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,900&display=swap');
+// ABSTRACTS
+@import "./abstracts/variables";
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+@import "./abstracts/helpers";
+
+// BASE 
+@import "./base/reset";
+@import "./base/normalize";
+@import "./base/typography";
+
+// COMPONENTS
+@import "./components/badge";
+@import "./components/button";
+@import "./components/card";
+@import "./components/dropdown";
+@import "./components/input";
+@import "./components/carousel";
+
+// LAYOUTS
+@import "./layouts/grid";
+@import "./layouts/flex";
+@import "./layouts/header";
+@import "./layouts/navigation";
+@import "./layouts/sidebar";
+@import "./layouts/content";
+@import "./layouts/container";
+@import "./layouts/forms";
+@import "./layouts/footer";
+
+// PAGES
+@import "./pages/contact";
+@import "./pages/home";
+
+
+// THEMES
+@import "./themes/admin";
+@import "./themes/default"; 
+@import "./themes/dark"; 
+
+// VENDORS
+@import "./vendors/bootstrap";
+
+//https://www.google.com/search?q=design%20dashboard&tbm=isch&tbs=rimg:CSIr24zrJHsDYfB9oormg78L&hl=es-419&sa=X&ved=0CB0QuIIBahcKEwioop7a9MDtAhUAAAAAHQAAAAAQMA&biw=1349&bih=661#imgrc=fDuXj9i5ILISvM
+//https://elements-cover-images-0.imgix.net/b16b7f48-e498-4a4c-8b95-b222795da5e4?auto=compress%2Cformat&fit=max&w=1019&s=af43324122c23c194450cd1f65afbc84

@@ -1,0 +1,6 @@
+.main__content{
+    margin-left: var(--with-sidebar);
+    background-color:var(--color-page-background);
+    min-height: calc(100vh - 4rem - 4rem);
+    transition: margin-left .3s ease;
+}
